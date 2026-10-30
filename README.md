@@ -1,115 +1,124 @@
-# Sales Data Analysis & Interactive Dashboard
+# Sales Data Analysis Dashboard
 
-An end-to-end data analysis project using Python to explore sales performance, identify business trends, and build an interactive dashboard.
+An interactive sales analysis dashboard built using Python, Flask, HTML, CSS, JavaScript, and Chart.js. This project explores the Superstore dataset to analyze sales performance, profitability, customer behavior, and regional trends.
 
 ## Project Overview
 
-This project analyzes the Sample Superstore dataset to understand sales performance, profitability, customer behavior, and regional trends.
+The goal of this project is to transform raw sales data into meaningful insights through data analysis and interactive visualizations.
 
-An interactive dashboard was developed using Streamlit and Plotly to make the analysis easier to explore through dynamic filters and visualizations.
+The dashboard allows users to explore business performance using filters and interactive charts.
 
 ## Technologies Used
 
-- **Python** – Data analysis and processing
+- **Python** – Data processing and analysis
 - **Pandas & NumPy** – Data manipulation
-- **Matplotlib & Seaborn** – Data visualization
-- **Plotly** – Interactive charts
-- **Streamlit** – Interactive dashboard
+- **Matplotlib & Seaborn** – Data visualization and exploratory analysis
+- **Flask** – Backend and API
+- **HTML5 & CSS3** – Frontend structure and styling
+- **JavaScript** – Dashboard interactions
+- **Chart.js** – Interactive charts
 - **Jupyter Notebook** – Exploratory Data Analysis
 
 ## Dataset
 
-The project uses the Sample Superstore dataset, containing 9,994 records and 21 columns related to orders, customers, products, sales, and profits.
+The project uses the Superstore dataset from Kaggle.
 
-## Key Performance Indicators
-
-- Total Sales: $2,297,200.86
-- Total Profit: $286,397.02
-- Total Orders: 5,009
-- Total Customers: 793
-- Total Quantity Sold: 37,873
-
-## Analysis & Insights
-
-The analysis explores:
-
-- Sales and profit performance by category and sub-category
-- Regional sales and profitability
-- Monthly and yearly sales trends
-- Customer purchasing behavior
-- Discount impact on profitability
-- Top-performing customers
-- Products and sub-categories generating losses
+- Dataset: [Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
+- Records: 9,994
+- Features: 21 columns
 
 ## Dashboard Features
 
-- Interactive filters by year, region, and category
-- Dynamic KPI cards
-- Monthly sales trend visualization
-- Category and regional performance charts
-- Top 10 customers analysis
-- Discount impact analysis
-- Filtered data explorer
+- Key Performance Indicators (KPIs)
+- Total Sales, Total Profit, Orders, and Customers
+- Monthly Sales and Profit Trends
+- Sales by Category
+- Regional Performance Analysis
+- Top 10 Customers
+- Interactive Filters:
+  - Year
+  - Region
+  - Category
+- Reset Filters
 
 ## Project Structure
 
 ```text
 Sales-Data-Analysis/
-│
 ├── data/
-│   └── Sample - Superstore.csv
-│
 ├── images/
-│   └── profit_by_category.png
-│
 ├── notebooks/
-│
+├── static/
+│   ├── css/
+│   └── js/
+├── templates/
 ├── sales_analysis.ipynb
 ├── app.py
+├── server.py
 ├── requirements.txt
 └── README.md
 ```
 
-## Installation & Usage
+## Installation and Setup
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/nacerimohamed/Sales-Data-Analysis.git
-```
-
-2. Navigate to the project directory:
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/YOUR-USERNAME/Sales-Data-Analysis.git
 cd Sales-Data-Analysis
 ```
 
-3. Create and activate a virtual environment:
+### 2. Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Windows:
+### 3. Activate the environment
+
+Windows PowerShell:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-4. Install the required packages:
+### 4. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Run the dashboard:
+### 5. Run the dashboard
 
 ```bash
-streamlit run app.py
+python server.py
 ```
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
+
+## Analysis Highlights
+
+- Technology is the highest-performing category in terms of sales and profit.
+- The West region generates the highest total sales and profit.
+- The Consumer segment contributes the largest share of sales.
+- Tables and Bookcases are among the sub-categories with negative profit.
+
+## Screenshots
+
+Dashboard screenshots will be added here.
 
 ## Author
 
 **Mohamed Naceri**
 
-Full Stack Developer | Data Analysis Enthusiast
+[GitHub](https://github.com/nacerimohamed)
+
+[Portfolio](https://mednaecri.netlify.app/)
+
+---
+
+This project was developed for learning and portfolio purposes.
