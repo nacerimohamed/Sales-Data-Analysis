@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <span>Sales<span class="brand-light">Analytics</span></span>
+        </div>
+
+        <div class="sidebar-label">MENU</div>
+
+        <a href="#" class="nav-link active">
+            <span class="nav-icon">▦</span>
+            Overview
+        </a>
+
+        <div class="sidebar-footer">
+            <div class="status-dot"></div>
+            <span>Dashboard Online</span>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">Dashboard / Overview</p>
+                <h1>Sales Overview</h1>
+                <p class="subtitle">Monitor your business performance and sales insights.</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="live-status">
+                    <span class="live-dot"></span>
+                    Live Data
+                </span>
+            </div>
+        </header>
+       
+<section class="filters-panel">
+    <div class="filter-heading">
+        <div>
+            <h2>Filters</h2>
+            <p>Customize your dashboard view</p>
+        </div>
+        <button id="reset-filters" class="reset-button">Reset Filters</button>
+    </div>
+
+    <div class="filters-grid">
+        <div class="filter-group">
+            <label for="year-filter">Year</label>
+            <select id="year-filter">
+                <option value="all">All Years</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="region-filter">Region</label>
+            <select id="region-filter">
+                <option value="all">All Regions</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="category-filter">Category</label>
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Key Performance Indicators</h2>
+                <p>Your overall business performance</p>
+            </div>
+        </section>
+
+        <section class="kpi-grid">
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Sales</span>
+                    <div class="kpi-icon blue">↗</div>
+                </div>
+                <h3 id="total-sales">Loading...</h3>
+                <p class="kpi-description">Total revenue generated</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Profit</span>
+                    <div class="kpi-icon green">↗</div>
+                </div>
+                <h3 id="total-profit">Loading...</h3>
+                <p class="kpi-description">Net profit generated</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Orders</span>
+                    <div class="kpi-icon purple">▤</div>
+                </div>
+                <h3 id="total-orders">Loading...</h3>
+                <p class="kpi-description">Number of unique orders</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Customers</span>
+                    <div class="kpi-icon orange">♙</div>
+                </div>
+                <h3 id="total-customers">Loading...</h3>
+                <p class="kpi-description">Unique customers</p>
+            </article>
+
+        </section>
+
+        <section class="secondary-grid">
+
+            <article class="info-card">
+                <span>Total Quantity Sold</span>
+                <h3 id="total-quantity">Loading...</h3>
+            </article>
+
+            <article class="info-card">
+                <span>Average Order Value</span>
+                <h3 id="average-order-value">Loading...</h3>
+            </article>
+
+        </section>
+<section class="charts-grid">
+
+    <article class="chart-card chart-wide">
+        <div class="chart-header">
+            <div>
+                <h2>Monthly Sales Trend</h2>
+                <p>Sales and profit performance over time</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="monthlySalesChart"></canvas>
+        </div>
+    </article>
+
+    <article class="chart-card">
+        <div class="chart-header">
+            <div>
+                <h2>Sales by Category</h2>
+                <p>Revenue distribution</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </article>
+
+    <article class="chart-card">
+        <div class="chart-header">
+            <div>
+                <h2>Regional Performance</h2>
+                <p>Profit by region</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="regionChart"></canvas>
+        </div>
+    </article>
+
+    <article class="chart-card chart-wide">
+        <div class="chart-header">
+            <div>
+                <h2>Top 10 Customers</h2>
+                <p>Customers ranked by total sales</p>
+            </div>
+        </div>
+        <div class="chart-container customer-chart">
+            <canvas id="customersChart"></canvas>
+        </div>
+    </article>
+
+</section>
+
+
+        <footer class="footer">
+            <p>Sales Analytics Dashboard · Built with Python, Flask & JavaScript</p>
+            <span>© 2026 Mohamed Naceri</span>
+        </footer>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
