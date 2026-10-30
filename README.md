@@ -19,6 +19,11 @@ The dashboard allows users to explore business performance using filters and int
 - **Chart.js** – Interactive charts
 - **Jupyter Notebook** – Exploratory Data Analysis
 
+
+
+## Dashboard Preview
+
+![Sales Data Analysis Dashboard](images/c2.png)
 ## Dataset
 
 The project uses the Superstore dataset from Kaggle.
@@ -107,9 +112,7 @@ http://127.0.0.1:5000
 - The Consumer segment contributes the largest share of sales.
 - Tables and Bookcases are among the sub-categories with negative profit.
 
-## Screenshots
 
-Dashboard screenshots will be added here.
 
 ## Author
 
