@@ -64,7 +64,7 @@ Sales-Data-Analysis/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/Sales-Data-Analysis.git
+git clone https://github.com/nacerimohamed/Sales-Data-Analysis.git
 cd Sales-Data-Analysis
 ```
 
